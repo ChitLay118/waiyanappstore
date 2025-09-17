@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="my">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WaiYan App Store</title>
+  <style>
+    :root{
+      --bg:#f7f8fb; --card:#ffffff; --accent:#0b74de; --muted:#6b7280;
+      --shadow: 0 6px 18px rgba(16,24,40,0.08);
+      --glass: rgba(255,255,255,0.65);
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Myanmar","Myanmar3",Arial;
+    }
+    body{margin:0;background:linear-gradient(180deg,#f3f7ff 0%,var(--bg) 100%);color:#0f172a}
+    .wrap{max-width:1100px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap: wrap; gap: 10px;}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#0b74de,#5bc0f8);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;box-shadow:var(--shadow)}
+    h1{font-size:18px;margin:0}
+    p.lead{margin:0;color:var(--muted);font-size:13px}
+    .contact{font-size:13px;color:var(--muted);text-align:right}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:18px}
+    .card{background:var(--card);border-radius:12px;padding:14px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start; transition: all 0.2s ease-in-out;}
+    .card:hover{ transform: translateY(-4px); box-shadow: 0 10px 22px rgba(16,24,40,0.1); }
+    .icon{width:72px;height:72px;border-radius:14px;flex:0 0 72px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .icon img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta{flex:1}
+    .app-title{font-weight:700;margin:0 0 6px 0}
+    .meta small{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+    .desc{font-size:13px;color:#111827;line-height:1.3;margin-bottom:10px}
+    .actions{display:flex;gap:8px;align-items:center}
+    .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:10px;border:0;cursor:pointer;font-weight:600; transition: all 0.2s ease-in-out;}
+    .btn:hover{ opacity: 0.9; transform: scale(1.02); }
+    .btn.secondary{background:#eef2ff;color:var(--accent);border:1px solid rgba(11,116,222,0.12)}
+    .small{font-size:13px;padding:6px 10px}
+    .banner{position:fixed;left:50%;transform:translateX(-50%);top:18px;background:linear-gradient(90deg,#0b74de,#3aa0f9);color:white;padding:10px 16px;border-radius:10px;box-shadow:0 10px 30px rgba(11,116,222,0.18);display:flex;gap:12px;align-items:center;z-index:120;min-width:320px;display:none}
+    .banner .txt{font-weight:700}
+    .banner .right{margin-left:auto;font-size:13px;opacity:0.95}
+    .progress-wrap{height:8px;background:rgba(255,255,255,0.16);border-radius:999px;overflow:hidden;width:160px}
+    .progress-bar{height:100%;width:0%;background:rgba(255,255,255,0.95);transition:width 0.2s linear}
+    footer{margin-top:22px;padding:12px;background:var(--card);border-radius:10px;box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center}
+    .note{color:var(--muted);font-size:13px}
+    /* Search bar */
+    .search-wrap{position:relative;margin-bottom:18px;}
+    .search-input{width:100%;padding:12px 16px 12px 44px;border-radius:10px;border:1px solid #e2e8f0;font-size:14px;background-color:var(--card);box-sizing: border-box;}
+    .search-input:focus{outline:2px solid var(--accent);border-color:transparent;}
+    .search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted);width:20px;height:20px;}
+    /* Modal styles */
+    .modal-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(15,23,42,0.6);z-index:200;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);display:none;}
+    .modal-dialog{background:var(--card);border-radius:12px;padding:24px;width:90%;max-width:500px;box-shadow:var(--shadow); transform: scale(0.95); opacity: 0; animation: modal-in 0.3s forwards cubic-bezier(0.175, 0.885, 0.32, 1.275);}
+    @keyframes modal-in { to { transform: scale(1); opacity: 1; } }
+    .modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+    .modal-header h2{margin:0;font-size:18px;}
+    .modal-close{background:none;border:0;font-size:24px;cursor:pointer;color:var(--muted);padding:0;}
+    .modal-body p{font-size:14px;color:#334155;line-height:1.5;}
+    .modal-body ol{padding-left:20px;font-size:14px;color:#334155;}
+    .modal-body li{margin-bottom:8px;}
+    .modal-body code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-family:monospace;}
+    /* responsive */
+    @media (max-width:520px){
+      .brand h1{font-size:16px}
+      .contact{font-size:12px; width: 100%; text-align: left; margin-top: 8px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Download progress banner -->
+  <div class="banner" id="banner" role="status" aria-live="polite">
+    <div class="txt">WaiYanApps — <span id="bannerApp">Preparing...</span></div>
+    <div style="width:8px"></div>
+    <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="right" id="bannerEmail">Email: c38925@gmail.com</div>
+  </div>
+
+  <!-- Main content wrapper -->
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">WY</div>
+        <div>
+          <h1>WaiYan App Store</h1>
+          <p class="lead">MediaFire links ဖြင့် download စနစ် — icon တွေကို MediaFire မှာ host ထားပြီး link ထည့်နိုင်ပါတယ်</p>
+        </div>
+      </div>
+      <div class="contact">Email: <strong>c38925@gmail.com</strong><br/><small style="color:var(--muted)">Right side contact (editable in code)</small></div>
+    </header>
+
+    <main>
+      <!-- Search bar -->
+      <div class="search-wrap">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10,18a8,8,0,1,1,8-8,8.009,8.009,0,0,1-8,8Zm0-14a6,6,0,1,0,6,6,6.007,6.007,0,0,0-6-6Z"></path><path d="M20.707,20.707a1,1,0,0,1-1.414,0l-4.243-4.243,1.414-1.414,4.243,4.243A1,1,0,0,1,20.707,20.707Z"></path></svg>
+        <input type="search" id="searchInput" class="search-input" placeholder="Search for apps...">
+      </div>
+      
+      <!-- App list will render here -->
+      <div class="grid" id="appsGrid"></div>
+    </main>
+
+    <footer>
+      <div class="note">App links: MediaFire (replace example URLs in the code with your MediaFire direct links)</div>
+      <div><button class="btn secondary small" onclick="openEditSource()">Edit in code</button></div>
+    </footer>
+  </div>
+
+  <!-- Modal for "Edit in code" instructions -->
+  <div class="modal-overlay" id="editModal" onclick="closeEditSource()">
+    <div class="modal-dialog" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h2>How to Edit Apps</h2>
+        <button class="modal-close" onclick="closeEditSource()" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>To add, remove, or change apps, you need to edit the source code.</p>
+        <ol>
+          <li>Find the <code>apps</code> array in the JavaScript section (inside the <code>&lt;script&gt;</code> tag).</li>
+          <li>Each app is an object <code>{ ... }</code>. You can copy/paste these to add more.</li>
+          <li>Change the <code>icon</code> value to your icon's direct URL.</li>
+          <li>Change the <code>download_link</code> to your file's share link.</li>
+        </ol>
+        <p>Save the file and reload the page to see your changes.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /**************************************************************************
+     * EDITABLE AREA:
+     * Replace icon and download_link values below with your own MediaFire links.
+     * - icon: URL to the icon image (MediaFire direct link or other image host)
+     * - download_link: MediaFire file link
+     * You can add/remove objects in the apps array to change what's shown on site.
+     **************************************************************************/
+    const apps = [
+      {
+        id: 'app1',
+        title: 'သတင်းနှင့်ဇာတ်ကား',
+        icon: '<a href="https://ibb.co/Dd2Lcdt"><img src="https://i.ibb.co/5ZH2pZ6/IMG-20250907-105744.png" alt="IMG-20250907-105744" border="0"></a>',
+        category: 'Entertainment',
+        purpose: 'သတင်း၊ ရုပ်ရှင်နှင့် ဗီဒီယိုများ ကြည့်ရှုရန်',
+        download_link: 'https://www.mediafire.com/file/kz2cas0hpx4p2mz/%E1%80%9E%E1%80%90%E1%80%84%E1%80%BA%E1%80%B8%E1%80%94%E1%80%BE%E1%80%84%E1%80%BA%E1%80%B7%E1%80%87%E1%80%AC%E1%80%90%E1%80%BA%E1%80%80%E1%80%AC%E1%80%B8update.apk/file'
+      },
+      {
+        id: 'app2',
+        title: 'Xvideo',
+        icon: '<a href="https://ibb.co/601rXkDK"><img src="https://i.ibb.co/601rXkDK/photo-2025-09-17-18-24-51.jpg" alt="photo-2025-09-17-18-24-51" border="0"></a>',
+        category: 'myanmarxxn',
+        purpose: 'all video',
+        download_link: 'https://www.mediafire.com/file/l2bhhand4d6yuuc/Xvideo.apk/file'
+      },
+      {
+        id: 'app3',
+        title: 'Drum Player',
+        icon: 'https://placehold.co/72x72/16a34a/ffffff?text=Drum',
+        category: 'Music',
+        purpose: 'Play drum loops and samples',
+        download_link: 'https://www.mediafire.com/file/EXAMPLE/app3.apk/file'
+      },
+      {
+        id: 'app4',
+        title: 'မြန်မာချက်နည်းများ',
+        icon: 'https://placehold.co/72x72/f97316/ffffff?text=ချက်',
+        category: 'Food',
+        purpose: 'မြန်မာအစားအစာ ချက်ပြုတ်နည်းပေါင်းစုံ',
+        download_link: 'https://www.mediafire.com/file/EXAMPLE/app4.apk/file'
+      },
+      {
+        id: 'app5',
+        title: 'English Learning',
+        icon: 'https://placehold.co/72x72/6366f1/ffffff?text=Eng',
+        category: 'Education',
+        purpose: 'Learn English vocabulary and grammar',
+        download_link: 'https://www.mediafire.com/file/EXAMPLE/app5.apk/file'
+      },
+      {
+        id: 'app6',
+        title: 'WaiYan Browser',
+        icon: 'https://placehold.co/72x72/0891b2/ffffff?text=WY',
+        category: 'Productivity',
+        purpose: 'Fast and secure web browser',
+        download_link: 'https://www.mediafire.com/file/EXAMPLE/app6.apk/file'
+      }
+    ];
+    /**************************************************************************
+     * END EDITABLE AREA
+     **************************************************************************/
+
+    // --- DOM Elements ---
+    const appsGrid = document.getElementById('appsGrid');
+    const banner = document.getElementById('banner');
+    const bannerApp = document.getElementById('bannerApp');
+    const bannerEmail = document.getElementById('bannerEmail');
+    const progressBar = document.getElementById('progressBar');
+    const searchInput = document.getElementById('searchInput');
+    const editModal = document.getElementById('editModal');
+
+    // --- Core Functions ---
+    
+    /**
+     * Renders a list of app cards into the grid.
+     * @param {Array} applist - The array of app objects to render.
+     */
+    function renderApps(applist){
+      appsGrid.innerHTML = '';
+      if (applist.length === 0) {
+        appsGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--muted);">No apps found.</p>`;
+        return;
+      }
+      applist.forEach(app=>{
+        const card = document.createElement('article');
+        card.className='card';
+        card.innerHTML = `
+          <div class="icon"><img src="${app.icon}" alt="${escapeHtml(app.title)} icon" loading="lazy" /></div>
+          <div class="meta">
+            <h3 class="app-title">${escapeHtml(app.title)}</h3>
+            <small>Category: <strong>${escapeHtml(app.category)}</strong></small>
+            <div class="desc">${escapeHtml(app.purpose)}</div>
+            <div class="actions">
+              <button class="btn small" onclick="startDownload('${app.id}')">Download</button>
+              <button class="btn secondary small" onclick="openLink('${app.download_link}','${app.title}')">Open link</button>
+            </div>
+          </div>
+        `;
+        appsGrid.appendChild(card);
+      });
+    }
+
+    /**
+     * Shows a banner and simulates download progress, then opens the link.
+     * @param {string} appId - The ID of the app to download.
+     */
+    function startDownload(appId){
+      const app = apps.find(a=>a.id===appId);
+      if(!app) return;
+      bannerApp.textContent = `${app.title} ကိုဒေါင်းလုဒ် စတင်နေသည်...`;
+      bannerEmail.textContent = 'Email: c38925@gmail.com';
+      progressBar.style.width = '0%';
+      banner.style.display = 'flex';
+
+      // Simulated progress
+      let p = 0;
+      const t = setInterval(()=>{
+        p += Math.floor(Math.random()*18)+8;
+        if(p>98) p = 98;
+        progressBar.style.width = p+'%';
+      }, 220);
+
+      // Open download link after short delay
+      setTimeout(()=>{
+        progressBar.style.width = '98%';
+        openLink(app.download_link, app.title);
+      }, 900);
+
+      // Finish progress animation
+      setTimeout(()=>{
+        clearInterval(t);
+        progressBar.style.width = '100%';
+        bannerApp.textContent = `${app.title} — Download လုပ်ခြင်း ပြီးဆုံးပါပြီ`;
+        setTimeout(()=> banner.style.display='none', 3000);
+      }, 3600);
+    }
+
+    /**
+     * Opens a URL in a new tab.
+     * @param {string} url - The URL to open.
+     */
+    function openLink(url){
+      try{
+        const w = window.open(url, '_blank');
+        if(!w) { // Popup blocked fallback
+          location.href = url;
+        }
+      }catch(e){
+        console.error("Failed to open link:", e);
+        location.href = url;
+      }
+    }
+    
+    /**
+     * Shows the "Edit Source" modal dialog.
+     */
+    function openEditSource(){
+      editModal.style.display = 'flex';
+    }
+
+    /**
+     * Hides the "Edit Source" modal dialog.
+     */
+    function closeEditSource(){
+      editModal.style.display = 'none';
+    }
+    
+    /**
+     * Filters and re-renders apps based on search input.
+     */
+    function handleSearch() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        if (!searchTerm) {
+            renderApps(apps);
+            return;
+        }
+        const filteredApps = apps.filter(app => 
+            app.title.toLowerCase().includes(searchTerm) || 
+            app.purpose.toLowerCase().includes(searchTerm) ||
+            app.category.toLowerCase().includes(searchTerm)
+        );
+        renderApps(filteredApps);
+    }
+
+    // --- Helper Utilities ---
+
+    /**
+     * Escapes HTML special characters to prevent XSS.
+     * @param {string} s - The string to escape.
+     */
+    function escapeHtml(s){
+      if(!s && s!==0) return '';
+      return String(s)
+        .replaceAll('&','&amp;')
+        .replaceAll('<','&lt;')
+        .replaceAll('>','&gt;')
+        .replaceAll('"','&quot;')
+        .replaceAll("'",'&#039;')
+    }
+
+    // --- Initial Setup ---
+
+    // Add event listener for the search input
+    searchInput.addEventListener('keyup', handleSearch);
+    
+    // Initial render of all apps
+    renderApps(apps);
+
+  </script>
+</body>
+</html>
