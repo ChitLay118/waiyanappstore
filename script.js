@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * Add a `type` property to each app: 'game', 'nogame' or 'edit'.
    * *************************************************************************/
   const apps = [{
-     Wai Yan, [19/09/2025 17:04]
-id: 'app1',
+      id: 'app1',
       title: 'သတင်းနှင့်ဇာတ်ကား',
       icon: 'https://i.ibb.co/NRB7DRs/IMG-20250907-105744.png',
       category: 'Entertainment',
@@ -104,9 +103,7 @@ id: 'app1',
       download_link: 'https://www.mediafire.com/file/jcj5q0w5s4t6p3r/AhaTik_Downloader_Premium_v1.52.3_Modded_by_%2540Getmodpcs.apk/file',
       type: 'nogame'
     }, {
-
-Wai Yan, [19/09/2025 17:04]
-id: 'app14',
+      id: 'app14',
       title: 'Ai Video Generator',
       icon: 'https://i.ibb.co/PZsPMHMX/photo-2025-09-18-10-22-02.jpg',
       category: 'modversion',
@@ -204,9 +201,7 @@ id: 'app14',
     }, {
       id: 'app26',
       title: 'Ai Photo Editor-Dofoto',
-
-Wai Yan, [19/09/2025 17:04]
-icon: 'https://i.ibb.co/1fgRyS4j/photo-2025-09-18-12-29-24.jpg',
+      icon: 'https://i.ibb.co/1fgRyS4j/photo-2025-09-18-12-29-24.jpg',
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/c7la3ud63elknm2/DoFoto_AI_Photo_Editor_v1.285.89_Modded_by_%2540Getmodpcs.apk/file',
@@ -304,9 +299,7 @@ icon: 'https://i.ibb.co/1fgRyS4j/photo-2025-09-18-12-29-24.jpg',
       title: 'Canva',
       icon: 'https://i.ibb.co/PZ1GSxbs/download.jpg',
       category: 'modversion',
-
-Wai Yan, [19/09/2025 17:04]
-purpose: 'App',
+      purpose: 'App',
       download_link: 'https://www.mediafire.com/file/ngbm1qfsyge6fuh/Canva_v2.206.0_MOD.apk/file',
       type: 'nogame'
     }, {
@@ -408,9 +401,7 @@ purpose: 'App',
     },{
       id: 'app51',
       title: 'Hot Slide v2.3.90',
-
-Wai Yan, [19/09/2025 17:04]
-icon: 'https://getmodsapk.com/storage/media/2025/9/hot-slide-mod-apk.webp',
+      icon: 'https://getmodsapk.com/storage/media/2025/9/hot-slide-mod-apk.webp',
       category: 'modversion',
       purpose: 'Unlimited Money/Unlocked',
       download_link: 'https://getmodsapk.com/dl-track/hot-slide-mod-apk/210984',
