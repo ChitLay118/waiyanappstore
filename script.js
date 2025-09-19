@@ -557,7 +557,10 @@ document.addEventListener('DOMContentLoaded', () => {
       filteredApps = apps.filter(app => app.type === 'game');
     } else if (activeTab === 'nogames') {
       filteredApps = apps.filter(app => app.type === 'nogame');
+    } else if (activeTab === 'edit') {
+      filteredApps = apps.filter(app => app.type === 'edit');
     }
+
 
     // Then filter by search term
     if (searchTerm) {
