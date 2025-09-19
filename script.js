@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'Unlimited Coins/Gems',
       download_link: 'https://getmodsapk.com/dl-track/tennis-clash-3d-modded-apk/209666',
-      type: 'games'
+      type: 'game'
     },
                 
     ];
