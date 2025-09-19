@@ -58,17 +58,16 @@ p.lead {
   font-size: 13px;
 }
 
-/* Updated Grid for responsive columns */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Mobile မှာ ၂ ခုစီပြရန် */
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 18px;
 }
 
 @media (min-width: 600px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr); /* Desktop မှာ ၄ ခုစီပြရန် */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -80,9 +79,8 @@ p.lead {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: flex-start;
   transition: all 0.2s ease-in-out;
-  text-align: center;
+  text-align: left;
 }
 
 .card:hover {
@@ -111,7 +109,6 @@ p.lead {
 }
 
 .meta {
-  flex: 1;
   width: 100%;
 }
 
