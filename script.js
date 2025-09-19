@@ -382,7 +382,18 @@ document.addEventListener('DOMContentLoaded', () => {
       purpose: 'App',
       download_link: 'https://getmodsapk.com/dl-track/9458-netflix-modded-apk/208982',
       type: 'nogame'
-    }, ];
+    },
+    {
+      id: 'app49',
+      title: 'Tennis Clash v6.18.2 MOD APK',
+      icon: 'https://getmodsapk.com/storage/media/2025/5/tennis-clash-mod-apk-1-1.webp',
+      category: 'modversion',
+      purpose: 'Unlimited Coins/Gems',
+      download_link: 'https://getmodsapk.com/dl-track/tennis-clash-3d-modded-apk/209666',
+      type: 'games'
+    },
+                
+    ];
   /**************************************************************************
    * END EDITABLE AREA
    **************************************************************************/
