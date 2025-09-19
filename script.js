@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/c2fy4cqbjozpju1/InShot_Pro_v2.653.1753_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'Edit Video Apps'
+      type: 'Edit'
     }, {
       id: 'app18',
       title: 'MoviesHub',
