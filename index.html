@@ -1,75 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="my">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WaiYan App and Modapp Store</title>
-  <link rel="stylesheet" href="style.css" />
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WY APPS STORE</title>
+  <meta name="description" content="All kinds of games and apps you need">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
 <body>
-  <div class="banner" id="banner" role="status" aria-live="polite">
-    <div class="txt">WaiYanApps — <span id="bannerApp">Preparing...</span></div>
-    <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
-    <div class="right" id="bannerEmail">Email: c38925@gmail.com</div>
-  </div>
-
   <div class="wrap">
     <header>
       <div class="brand">
-        <div class="logo">WY'</div>
+        <div class="logo">WY</div>
         <div>
-          <h1>WaiYan App and Modapp Store</h1>
-          <p class="lead">MediaFire,Broswer and Chrome ဖြင့် download စနစ်</p>
+          <h1>WY APPS STORE</h1>
+          <p class="lead">လိုချင်သော Game နှင့် App မျိုးစုံကို ဒီနေရာမှာ ရှာဖွေရယူနိုင်ပါသည်</p>
         </div>
       </div>
-      <div class="contact">Email: <strong>c388925@gmail.com</strong><br/><small style="color:var(--muted)">contact (+66926459800)</small></div>
+      <div class="contact">
+        <a href="https://t.me/WY_YOUTH" target="_blank">Contact Us</a>
+        <br>
+        <button onclick="openEditSource()">Edit Source Code</button>
+      </div>
     </header>
 
-    <main>
-      <div class="search-wrap">
-        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10,18a8,8,0,1,1,8-8,8.009,8.009,0,0,1-8,8Zm0-14a6,6,1,0,6,6,6.007,6.007,0,0,0-6-6Z"></path><path d="M20.707,20.707a1,1,0,0,1-1.414,0l-4.243-4.243,1.414-1.414,4.243,4.243A1,1,0,0,1,20.707,20.707Z"></path></svg>
-        <input type="search" id="searchInput" class="search-input" placeholder="Search for apps...">
-      </div>
-      
-      <div class="tabs">
-        <button class="tab-btn active" data-filter="all">Home</button>
-        <button class="tab-btn" data-filter="games">Games</button>
-        <button class="tab-btn" data-filter="nogames">Apps</button>
-        <button class="tab-btn" data-filter="edit">VideoEditApps</button>
-      </div>
+    <div class="search-wrap">
+      <input type="search" id="searchInput" class="search-input" placeholder="Search for games or apps...">
+    </div>
+    
+    <div class="tabs">
+      <button class="tab-btn active" data-filter="all">အကုန်လုံး</button>
+      <button class="tab-btn" data-filter="games">ဂိမ်းများ</button>
+      <button class="tab-btn" data-filter="nogames">အခြား Apps</button>
+      <button class="tab-btn" data-filter="edit">Video Editor</button>
+    </div>
 
-      <div class="grid" id="appsGrid"></div>
-      
-      <button id="showMoreBtn" class="btn secondary" style="display: none; margin: 1.5em auto; display: block;">နောက်ထပ် ပြရန်</button>
+    <main>
+      <div id="appsGrid" class="grid">
+        </div>
     </main>
 
-    <footer>
-      <div class="note">နောက်ထပ်ပိုပြီးအသုံးများတဲ့Mobappများကိုထက်ထည့်ပေးပါမည်</div>
-      <div><button class="btn secondary small" onclick="openEditSource()">Wellcome</button></div>
-    </footer>
-  </div>
-
-  <div class="modal-overlay" id="editModal" onclick="closeEditSource()">
-    <div class="modal-dialog" onclick="event.stopPropagation()">
-      <div class="modal-header">
-        <h2>How to download Apps</h2>
-        <button class="modal-close" onclick="closeEditSource()" aria-label="Close modal">×</button>
+    <div id="banner" class="banner">
+      <div>
+        <div id="bannerApp" class="txt"></div>
+        <div id="bannerEmail" class="right"></div>
       </div>
-      <div class="modal-body">
-        <p>To add, remove, or change apps, you need to edit the source code.</p>
-        <ol>
-          <li>ကိုယ်ဒေါင်းမည့်appရဲ့<code>download</code>ကိုနှိပ်ပေးပါ</li>
-          <li>ပြီးရင်Broswer သို့မဟုတ် Chorme ကိုရွေးပေးပါ</li>
-          <li>Change the <code>icon</code> value to your icon's direct URL.</li>
-          <li>Change the <code>download_link</code> to your file's share link.</li>
-        </ol>
-        <p>Save the file and reload the page to see your changes.</p>
+      <div class="progress-wrap">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <div id="editModal" class="modal-overlay">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h2>Edit Source Code</h2>
+          <button class="modal-close" onclick="closeEditSource()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>This is a custom apps store. To edit the app list, download the source code and modify the <code>apps</code> array in the <code>script.js</code> file.</p>
+          <ol>
+            <li>Find the <code>script.js</code> file.</li>
+            <li>Go to the <code>EDITABLE AREA</code>.</li>
+            <li>Change the <code>title</code>, <code>icon</code>, <code>category</code>, <code>purpose</code>, and <code>download_link</code> for each app.</li>
+            <li>Add a <code>type</code>: <code>'game'</code>, <code>'nogame'</code>, or <code>'edit'</code>.</li>
+          </ol>
+          <p>When you are done, upload the modified files back to your website.</p>
+        </div>
       </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
-
 </body>
 </html>
