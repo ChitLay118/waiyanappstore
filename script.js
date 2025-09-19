@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**************************************************************************
    * EDITABLE AREA:
    * Replace icon and download_link values below with your own MediaFire links.
-   * Add a `type` property to each app: 'game' , 'nogame' or 'edit'.
+   * Add a `type` property to each app: 'game', 'nogame' or 'edit'.
    * *************************************************************************/
   const apps = [{
       id: 'app1',
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/jcj5q0w5s4t6p3r/AhaTik_Downloader_Premium_v1.52.3_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app14',
       title: 'Ai Video Generator',
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/nz7f0gdfjhat5vm/Ai_Video_Generator.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app15',
       title: 'ADV Screen Recorder',
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/blsc8tudn5nmp7z/ADV_Screen_Recorder_Pro_v4.25.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app16',
       title: 'IMDB Movies and TV Shows',
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/iehjn9emmv2pa2l/IMDb_Premium_v9.3.2.160259480_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app17',
       title: 'InShot Video Editor',
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/sek461p93u6xi9n/MOVIES_HUB_PREMIUM_v2.3.8d_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app19',
       title: 'live Flight Tracker',
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/wswbqltg5zg9z6h/XRecorder_Pro_v2.8.7.5_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app23',
       title: 'Spotify',
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/n34kwclc3vnlx4t/PowerDirector_Premium_v15.9.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app26',
       title: 'Ai Photo Editor-Dofoto',
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/ltes3y3qyt7o947/ShotCut_Premium_v3.12.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app28',
       title: 'Vidma Ai-VideoEditor',
@@ -221,15 +221,15 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/t7l0exm7p4is8xw/Vidma_Premium_v2.40.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app29',
       title: 'CapCut pro freeversion',
-      icon: 'https://getmodsapk.com/storage/CapCut%20%20MOD%20APK7.webp',
+      icon: 'https://i.ibb.co/MDkZ00Tt/photo-2025-09-18-15-54-57.jpg',
       category: 'modversion',
-      purpose: 'အကုန်လုံးfreeသုံးပါ',
-      download_link: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326',
-      type: 'nogame'
+      purpose: 'App',
+      download_link: 'https://www.mediafire.com/file/vccwhk9ywmepcxd/CapCut_Pro_v15.6.0_Modded_by_%2540Getmodpcs.apk/file',
+      type: 'edit'
     }, {
       id: 'app30',
       title: 'Spring Video Editor',
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/e5w16wh5rodi0xi/Spring_Premium_v1.4.3.3537_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app31',
       title: 'KingMaster',
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/9cghockewg7efoq/KineMaster_Premium_v7.8.5.3542.GP_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app32',
       title: 'AllVideoDownloader',
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/ebteevjdthbzzsj/All_Video_Downloader_v1.7.2_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app33',
       title: 'Cartoon PhotoEditor',
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/l2p55wzq028j6nk/MyMovie_Premium_v14.13.5_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app41',
       title: 'Telegram Premium',
@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/psh22x5opjxwo1h/VideoShow_VIP_v11.7.1.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app43',
       title: 'AutoClicker',
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://file.apkdone.io/s/a8cFKqR8eGLmgew/download',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app47',
       title: 'Tiktok Mod',
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://files.modyolo.com/TikTok/TikTok%20v41.7.16%20MOD.apk',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app48',
       title: 'Netflix',
@@ -382,57 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
       purpose: 'App',
       download_link: 'https://getmodsapk.com/dl-track/9458-netflix-modded-apk/208982',
       type: 'nogame'
-    }, {
-      id: 'app49',
-      title: 'Tennis Clash v6.18.2 MOD APK',
-      icon: 'https://getmodsapk.com/storage/media/2025/5/tennis-clash-mod-apk-1-1.webp',
-      category: 'modversion',
-      purpose: 'Unlimited Coins/Gems',
-      download_link: 'https://getmodsapk.com/dl-track/tennis-clash-3d-modded-apk/209666',
-      type: 'game'
-    },{
-      id: 'app50',
-      title: 'Cat Runner v5.4.4',
-      icon: 'https://getmodsapk.com/storage/Cat-Runner-MOD-APK%20(2)1.webp',
-      category: 'modversion',
-      purpose: 'Unlimited Money/Gems',
-      download_link: 'https://getmodsapk.com/dl-track/cat-runner-mod-apk/212522',
-      type: 'game'
-    },{
-      id: 'app51',
-      title: 'Hot Slide v2.3.90',
-      icon: 'https://getmodsapk.com/storage/media/2025/9/hot-slide-mod-apk.webp',
-      category: 'modversion',
-      purpose: 'Unlimited Money/Unlocked',
-      download_link: 'https://getmodsapk.com/dl-track/hot-slide-mod-apk/210984',
-      type: 'game'
-    },{
-      id: 'app52',
-      title: 'CarX Highway Racing',
-      icon: 'https://getmodsapk.com/storage/CarX%20Highway%20Racing%20MOD%20APK%20(1)0.webp',
-      category: 'modversion',
-      purpose: 'Unlimited Money/VIP Unlocked',
-      download_link: 'https://getmodsapk.com/dl-track/carx-highway-racing-apk-mod/211881',
-      type: 'game'
-    },{
-      id: 'app53',
-      title: 'Invasion: Aerial Warfare',
-      icon: 'https://getmodsapk.com/storage/Invasion%20Modern%20Empire%20MOD%20APK4.webp',
-      category: 'modversion',
-      purpose: 'Unlimited Money/Energy',
-      download_link: 'https://getmodsapk.com/dl-track/invasion-modern-empire-mod-apk/210877',
-      type: 'game'
-    },{
-      id: 'app54',
-      title: 'Tacticool',
-      icon: 'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',
-      category: 'modversion',
-      purpose: 'Mod Menu/Unlimited Money',
-      download_link: 'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869',
-      type: 'game'
-    },
-                
-    ];
+    }, ];
   /**************************************************************************
    * END EDITABLE AREA
    **************************************************************************/
@@ -561,7 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
       filteredApps = apps.filter(app => app.type === 'edit');
     }
 
-
     // Then filter by search term
     if (searchTerm) {
       filteredApps = filteredApps.filter(app =>
@@ -591,11 +540,11 @@ document.addEventListener('DOMContentLoaded', () => {
   function escapeHtml(s) {
     if (!s && s !== 0) return '';
     return String(s)
-      .replaceAll('&', '&amp;')
-      .replaceAll('<', '&lt;')
-      .replaceAll('>', '&gt;')
-      .replaceAll('"', '&quot;')
-      .replaceAll("'", '&#039;');
+      .replaceAll('&', '&')
+      .replaceAll('<', '<')
+      .replaceAll('>', '>')
+      .replaceAll('"', '"')
+      .replaceAll("'", ''');
   }
 
   // --- Initial Setup ---
