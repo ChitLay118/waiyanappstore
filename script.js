@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: 'https://i.ibb.co/YFQkwW8G/photo-2025-09-17-23-50-08.jpg',
       category: 'Food',
       purpose: 'မြန်မာအစားအစာ ချက်ပြုတ်နည်းပေါင်းစုံ',
-      download_link: 'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%2580%258A%25E1%2580%25BA%25E1%2580%25B8.apk/file',
+      download_link: 'https://www.mediafire.com/file/gd0zxwuz1o58nuk/%25E1%2580%2599%25E1%2580%25BC%25E1%2580%2594%25E1%2580%25BA%25E1%2580%2599%25E1%2580%25AC%25E1%2580%259F%25E1%2580%2584%25E1%2580%25BA%25E1%2580%25B8%25E1%2580%2581%25E1%2580%25BB%25E1%2580%2580%25E1%2580%25BA%25E1%2580%2594%25E1%80%258A%25E1%2580%25BA%25E1%2580%25B8.apk/file',
       type: 'nogame'
     }, {
       id: 'app5',
@@ -418,10 +418,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 class="app-title">${escapeHtml(app.title)}</h3>
             <small>Category: <strong>${escapeHtml(app.category)}</strong></small>
             <div class="desc">${escapeHtml(app.purpose)}</div>
-            <div class="actions">
-              <button class="btn small" onclick="startDownload('${app.id}')">Download</button>
-              <button class="btn secondary small" onclick="openLink('${app.download_link}')">Open link</button>
-            </div>
+          </div>
+          <div class="actions">
+            <button class="btn small" onclick="startDownload('${app.id}')">Download</button>
+            <button class="btn secondary small" onclick="openLink('${app.download_link}')">Open link</button>
           </div>
         `;
       appsGrid.appendChild(card);
@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /**
-   * Filters and re-renders apps based on search input.
+   * Filters and re-renders apps based on search input and active tab.
    */
   function handleSearch() {
     const searchTerm = searchInput.value.toLowerCase().trim();
