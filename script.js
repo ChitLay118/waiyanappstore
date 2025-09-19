@@ -442,43 +442,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const bannerEmail = document.getElementById('bannerEmail');
   const progressBar = document.getElementById('progressBar');
   const searchInput = document.getElementById('searchInput');
-  const showMoreButton = document.getElementById('showMoreBtn');
   const editModal = document.getElementById('editModal');
   const tabButtons = document.querySelectorAll('.tab-btn');
-
-  // Apps loading variables
-  const initialAppsToShow = 8; // စစချင်းပြမယ့် apps အရေအတွက်
-  let appsToShowIncrement = 8; // တစ်ခါနှိပ်ရင် ထပ်ပြမယ့် apps အရေအတွက်
-  let currentAppsCount = 0; // လက်ရှိပြထားပြီး apps အရေအတွက်
-  let currentFilteredApps = []; // လက်ရှိ filter လုပ်ထားတဲ့ apps တွေကို သိမ်းထားဖို့
 
   // --- Core Functions ---
 
   /**
    * Renders a list of app cards into the grid.
    * @param {Array} applist - The array of app objects to render.
-   * @param {boolean} isInitialRender - Check if it's the first time rendering.
    */
-  function renderApps(applist, isInitialRender = true) {
-    currentFilteredApps = applist;
-
-    // စစချင်း rendering ဆိုရင် grid ကို ရှင်းထုတ်လိုက်ပြီး လက်ရှိ apps အရေအတွက်ကို သုည ပြန်ထား
-    if (isInitialRender) {
-      appsGrid.innerHTML = '';
-      currentAppsCount = 0;
-    }
-
-    if (currentFilteredApps.length === 0) {
+  function renderApps(applist) {
+    appsGrid.innerHTML = '';
+    if (applist.length === 0) {
       appsGrid.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; color: var(--muted);">No apps found.</p>`;
-      showMoreButton.style.display = 'none';
       return;
     }
-
-    // ပြသရမယ့် apps အရေအတွက်ကို တွက်ချက်ခြင်း
-    const nextAppsCount = isInitialRender ? initialAppsToShow : currentAppsCount + appsToShowIncrement;
-    const appsToDisplay = currentFilteredApps.slice(currentAppsCount, nextAppsCount);
-
-    appsToDisplay.forEach(app => {
+    applist.forEach(app => {
       const card = document.createElement('article');
       card.className = 'card';
       card.innerHTML = `
@@ -495,23 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
       appsGrid.appendChild(card);
     });
-
-    currentAppsCount = currentAppsCount + appsToDisplay.length;
-
-    // "Show More" ခလုတ်ကို ပြသရန်
-    if (currentAppsCount < currentFilteredApps.length) {
-      showMoreButton.style.display = 'block';
-    } else {
-      showMoreButton.style.display = 'none';
-    }
   }
-
-  /**
-   * Shows more apps when the "Show More" button is clicked.
-   */
-  window.showMore = function() {
-    renderApps(currentFilteredApps, false);
-  };
 
   /**
    * Shows a banner and simulates download progress, then opens the link.
@@ -625,17 +588,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function escapeHtml(s) {
     if (!s && s !== 0) return '';
     return String(s)
-      .replaceAll('&', '&amp;')
-      .replaceAll('<', '&lt;')
-      .replaceAll('>', '&gt;')
-      .replaceAll('"', '&quot;')
-      .replaceAll("'", '&#039;');
+      .replaceAll('&', '&')
+      .replaceAll('<', '<')
+      .replaceAll('>', '>')
+      .replaceAll('"', '"')
+      .replaceAll("'", ''');
   }
 
   // --- Initial Setup ---
   searchInput.addEventListener('input', handleSearch);
   tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
-  showMoreButton.addEventListener('click', window.showMore);
 
   // Initial render of all apps
   renderApps(apps);
