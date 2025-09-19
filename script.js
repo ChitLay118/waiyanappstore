@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/nz7f0gdfjhat5vm/Ai_Video_Generator.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app15',
       title: 'ADV Screen Recorder',
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/c7la3ud63elknm2/DoFoto_AI_Photo_Editor_v1.285.89_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app27',
       title: 'ShotCut Ai',
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/6mjxwm5ie5wka3o/ToonTap_Pro_v1.50.89_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app34',
       title: 'BesoccerPremium',
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/ri34hjh84h7456p/Picsart_Premium_Gold_v29.3.2_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app37',
       title: 'Ai Chat Assistant',
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/ngbm1qfsyge6fuh/Canva_v2.206.0_MOD.apk/file',
-      type: 'nogame'
+      type: 'edit'
     }, {
       id: 'app39',
       title: 'IPTV Pro',
@@ -312,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/l2p55wzq028j6nk/MyMovie_Premium_v14.13.5_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit'
+      type: 'nogame'
     }, {
       id: 'app41',
       title: 'Telegram Premium',
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/nru2908tnni49s9/Auto_Clicker_Pro_v2.6.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'game'
+      type: 'nogame'
     }, {
       id: 'app44',
       title: 'Chatgpt Premium',
