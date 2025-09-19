@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: 'https://getmodsapk.com/storage/media/2025/9/hot-slide-mod-apk.webp',
       category: 'modversion',
       purpose: 'Unlimited Money/Unlocked',
-      download_link: 'https://getmodsapk.com/hot-slide-mod-apk/download/210984',
+      download_link: 'https://getmodsapk.com/dl-track/hot-slide-mod-apk/210984',
       type: 'game'
     },{
       id: 'app52',
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: 'https://getmodsapk.com/storage/Invasion%20Modern%20Empire%20MOD%20APK4.webp',
       category: 'modversion',
       purpose: 'Unlimited Money/Energy',
-      download_link: 'https://getmodsapk.com/invasion-modern-empire-mod-apk/download/210877',
+      download_link: 'https://getmodsapk.com/dl-track/invasion-modern-empire-mod-apk/210877',
       type: 'game'
     },{
       id: 'app54',
@@ -428,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: 'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',
       category: 'modversion',
       purpose: 'Mod Menu/Unlimited Money',
-      download_link: 'https://getmodsapk.com/tacticool-mod-apk/download/210869',
+      download_link: 'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869',
       type: 'game'
     },
                 
