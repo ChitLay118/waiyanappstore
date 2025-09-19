@@ -64,12 +64,25 @@ p.lead {
   text-align: right;
 }
 
-/* Updated grid for 4 columns on all screen sizes */
+/* Updated grid for 4 columns on mobile and desktop */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(220px, 1fr);
   gap: 16px;
   margin-top: 18px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but allow scrolling */
+.grid::-webkit-scrollbar {
+  display: none;
+}
+.grid {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .card {
@@ -82,6 +95,7 @@ p.lead {
   gap: 12px;
   align-items: flex-start;
   transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
 }
 
 .card:hover {
@@ -89,10 +103,17 @@ p.lead {
   box-shadow: 0 10px 22px rgba(16, 24, 40, 0.1);
 }
 
-/* Updated icon size for mobile view */
-.icon {
+/* New layout for mobile icon and meta */
+.app-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
   width: 100%;
-  height: auto;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
   aspect-ratio: 1/1;
   border-radius: 14px;
   background: #f1f5f9;
@@ -100,7 +121,7 @@ p.lead {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: 8px;
+  flex-shrink: 0;
 }
 
 .icon img {
@@ -112,26 +133,38 @@ p.lead {
 
 .meta {
   flex: 1;
-  width: 100%;
+  min-width: 0;
 }
 
 .app-title {
   font-weight: 500;
-  margin: 0 0 6px 0;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .meta small {
   display: block;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11px;
   margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* Truncate description to 2 lines */
 .desc {
   font-size: 13px;
   color: #111827;
   line-height: 1.3;
+  margin-top: 8px;
   margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .actions {
