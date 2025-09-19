@@ -382,14 +382,37 @@ document.addEventListener('DOMContentLoaded', () => {
       purpose: 'App',
       download_link: 'https://getmodsapk.com/dl-track/9458-netflix-modded-apk/208982',
       type: 'nogame'
-    },
-    {
+    }, {
       id: 'app49',
       title: 'Tennis Clash v6.18.2 MOD APK',
       icon: 'https://getmodsapk.com/storage/media/2025/5/tennis-clash-mod-apk-1-1.webp',
       category: 'modversion',
       purpose: 'Unlimited Coins/Gems',
       download_link: 'https://getmodsapk.com/dl-track/tennis-clash-3d-modded-apk/209666',
+      type: 'game'
+    },{
+      id: 'app50',
+      title: 'Cat Runner v5.4.4',
+      icon: 'https://getmodsapk.com/storage/Cat-Runner-MOD-APK%20(2)1.webp',
+      category: 'modversion',
+      purpose: 'Unlimited Money/Gems',
+      download_link: 'https://getmodsapk.com/dl-track/cat-runner-mod-apk/212522',
+      type: 'game'
+    },{
+      id: 'app51',
+      title: 'Hot Slide v2.3.90',
+      icon: 'https://getmodsapk.com/storage/media/2025/9/hot-slide-mod-apk.webp',
+      category: 'modversion',
+      purpose: 'Unlimited Money/Unlocked',
+      download_link: 'https://getmodsapk.com/hot-slide-mod-apk/download/210984',
+      type: 'game'
+    },{
+      id: 'app52',
+      title: 'CarX Highway Racing',
+      icon: 'https://getmodsapk.com/storage/CarX%20Highway%20Racing%20MOD%20APK%20(1)0.webp',
+      category: 'modversion',
+      purpose: 'Unlimited Money/VIP Unlocked',
+      download_link: 'https://getmodsapk.com/dl-track/carx-highway-racing-apk-mod/211881',
       type: 'game'
     },
                 
