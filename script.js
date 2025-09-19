@@ -1,11 +1,6 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
 
-  /**************************************************************************
-   * EDITABLE AREA:
-   * Replace icon and download_link values below with your own MediaFire links.
-   * Add a `type` property to each app: 'game', 'nogame' or 'edit'.
-   * *************************************************************************/
   const apps = [{
       id: 'app1',
       title: 'သတင်းနှင့်ဇာတ်ကား',
@@ -133,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/c2fy4cqbjozpju1/InShot_Pro_v2.653.1753_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app18',
       title: 'MoviesHub',
@@ -173,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/wswbqltg5zg9z6h/XRecorder_Pro_v2.8.7.5_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Screen Recorder (Video Utility)
+      type: 'edit'
     }, {
       id: 'app23',
       title: 'Spotify',
@@ -197,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/n34kwclc3vnlx4t/PowerDirector_Premium_v15.9.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app26',
       title: 'Ai Photo Editor-Dofoto',
@@ -213,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/ltes3y3qyt7o947/ShotCut_Premium_v3.12.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app28',
       title: 'Vidma Ai-VideoEditor',
@@ -221,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/t7l0exm7p4is8xw/Vidma_Premium_v2.40.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app29',
       title: 'CapCut pro freeversion',
@@ -229,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'အကုန်လုံးfreeသုံးပါ',
       download_link: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app30',
       title: 'Spring Video Editor',
@@ -237,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/e5w16wh5rodi0xi/Spring_Premium_v1.4.3.3537_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app31',
       title: 'KingMaster',
@@ -245,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/9cghockewg7efoq/KineMaster_Premium_v7.8.5.3542.GP_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app32',
       title: 'AllVideoDownloader',
@@ -253,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/ebteevjdthbzzsj/All_Video_Downloader_v1.7.2_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'nogame' // Downloader (Not an Editor)
+      type: 'nogame'
     }, {
       id: 'app33',
       title: 'Cartoon PhotoEditor',
@@ -317,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/l2p55wzq028j6nk/MyMovie_Premium_v14.13.5_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app41',
       title: 'Telegram Premium',
@@ -333,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/psh22x5opjxwo1h/VideoShow_VIP_v11.7.1.0_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app43',
       title: 'AutoClicker',
@@ -365,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://file.apkdone.io/s/a8cFKqR8eGLmgew/download',
-      type: 'edit' // Video Editor
+      type: 'edit'
     }, {
       id: 'app47',
       title: 'Tiktok Mod',
@@ -431,26 +426,13 @@ document.addEventListener('DOMContentLoaded', () => {
       download_link: 'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869',
       type: 'game'
     }, ];
-  /**************************************************************************
-   * END EDITABLE AREA
-   **************************************************************************/
-
+  
   // --- DOM Elements ---
   const appsGrid = document.getElementById('appsGrid');
-  const banner = document.getElementById('banner');
-  const bannerApp = document.getElementById('bannerApp');
-  const bannerEmail = document.getElementById('bannerEmail');
-  const progressBar = document.getElementById('progressBar');
   const searchInput = document.getElementById('searchInput');
-  const editModal = document.getElementById('editModal');
   const tabButtons = document.querySelectorAll('.tab-btn');
 
   // --- Core Functions ---
-
-  /**
-   * Renders a list of app cards into the grid.
-   * @param {Array} applist - The array of app objects to render.
-   */
   function renderApps(applist) {
     appsGrid.innerHTML = '';
     if (applist.length === 0) {
@@ -461,105 +443,33 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('article');
       card.className = 'card';
       card.innerHTML = `
-        <div class="icon"><img src="${app.icon}" alt="${escapeHtml(app.title)} icon" loading="lazy" /></div>
+        <div class="icon"><img src="${app.icon}" alt="${app.title} icon" loading="lazy" /></div>
         <div class="meta">
-          <h3 class="app-title">${escapeHtml(app.title)}</h3>
-          <small>Category: <strong>${escapeHtml(app.category)}</strong></small>
-          <div class="desc">${escapeHtml(app.purpose)}</div>
+          <h3 class="app-title">${app.title}</h3>
+          <small>Category: <strong>${app.category}</strong></small>
+          <div class="desc">${app.purpose}</div>
         </div>
         <div class="actions">
-          <button class="btn small" onclick="startDownload('${app.id}')">Download</button>
-          <button class="btn secondary small" onclick="openLink('${app.download_link}')">Open link</button>
+          <a href="${app.download_link}" class="btn small">Download</a>
         </div>
       `;
       appsGrid.appendChild(card);
     });
   }
 
-  /**
-   * Shows a banner and simulates download progress, then opens the link.
-   * @param {string} appId - The ID of the app to download.
-   */
-  window.startDownload = function(appId) {
-    const app = apps.find(a => a.id === appId);
-    if (!app) return;
-    bannerApp.textContent = `${app.title} ကိုဒေါင်းလုဒ် စတင်နေသည်...`;
-    bannerEmail.textContent = 'Email: c38925@gmail.com';
-    progressBar.style.width = '0%';
-    banner.style.display = 'flex';
-
-    // Simulated progress
-    let p = 0;
-    const t = setInterval(() => {
-      p += Math.floor(Math.random() * 18) + 8;
-      if (p > 98) p = 98;
-      progressBar.style.width = p + '%';
-    }, 220);
-
-    // Open download link after short delay
-    setTimeout(() => {
-      progressBar.style.width = '98%';
-      openLink(app.download_link);
-    }, 900);
-
-    // Finish progress animation
-    setTimeout(() => {
-      clearInterval(t);
-      progressBar.style.width = '100%';
-      bannerApp.textContent = `${app.title} — Download လုပ်ခြင်း ပြီးဆုံးပါပြီ`;
-      setTimeout(() => banner.style.display = 'none', 3000);
-    }, 3600);
-  };
-
-  /**
-   * Opens a URL in a new tab, with ad logic.
-   * @param {string} url - The URL to open.
-   */
-  window.openLink = function(url) {
-    // Adsterra code can be placed here if it's a JS-based pop-up
-    try {
-      const w = window.open(url, '_blank');
-      if (!w) { // Popup blocked fallback
-        location.href = url;
-      }
-    } catch (e) {
-      console.error("Failed to open link:", e);
-      location.href = url;
-    }
-  };
-
-  /**
-   * Shows the "Edit Source" modal dialog.
-   */
-  window.openEditSource = function() {
-    editModal.style.display = 'flex';
-  };
-
-  /**
-   * Hides the "Edit Source" modal dialog.
-   */
-  window.closeEditSource = function() {
-    editModal.style.display = 'none';
-  };
-
-  /**
-   * Filters and re-renders apps based on search input and active tab.
-   */
   function handleSearch() {
     const searchTerm = searchInput.value.toLowerCase().trim();
     let filteredApps = apps;
 
-    // First filter by active tab
     const activeTab = document.querySelector('.tab-btn.active').dataset.filter;
     if (activeTab === 'games') {
       filteredApps = apps.filter(app => app.type === 'game');
     } else if (activeTab === 'nogames') {
       filteredApps = apps.filter(app => app.type === 'nogame');
     } else if (activeTab === 'edit') {
-      filteredApps = apps.filter(app => app.type === 'edit'); // VideoEditApps အတွက် filter
+      filteredApps = apps.filter(app => app.type === 'edit');
     }
 
-    // Then filter by search term
     if (searchTerm) {
       filteredApps = filteredApps.filter(app =>
         app.title.toLowerCase().includes(searchTerm) ||
@@ -571,34 +481,14 @@ document.addEventListener('DOMContentLoaded', () => {
     renderApps(filteredApps);
   }
 
-  /**
-   * Handles tab clicks to filter apps.
-   */
   function handleTabClick(event) {
     tabButtons.forEach(btn => btn.classList.remove('active'));
     event.target.classList.add('active');
-    handleSearch(); // Rerender based on the new active tab
-  }
-
-  // --- Helper Utilities ---
-  /**
-   * Escapes HTML special characters to prevent XSS.
-   * @param {string} s - The string to escape.
-   */
-  function escapeHtml(s) {
-    if (!s && s !== 0) return '';
-    return String(s)
-      .replaceAll('&', '&')
-      .replaceAll('<', '<')
-      .replaceAll('>', '>')
-      .replaceAll('"', '"')
-      .replaceAll("'", ''');
+    handleSearch();
   }
 
   // --- Initial Setup ---
   searchInput.addEventListener('input', handleSearch);
   tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
-
-  // Initial render of all apps
   renderApps(apps);
 });
