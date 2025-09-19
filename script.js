@@ -225,10 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, {
       id: 'app29',
       title: 'CapCut pro freeversion',
-      icon: 'https://i.ibb.co/MDkZ00Tt/photo-2025-09-18-15-54-57.jpg',
+      icon: 'https://getmodsapk.com/storage/CapCut%20%20MOD%20APK7.webp',
       category: 'modversion',
-      purpose: 'App',
-      download_link: 'https://www.mediafire.com/file/vccwhk9ywmepcxd/CapCut_Pro_v15.6.0_Modded_by_%2540Getmodpcs.apk/file',
+      purpose: 'အကုန်လုံးfreeသုံးပါ',
+      download_link: 'https://getmodsapk.com/dl-track/capcut-pro-free-mod-apk/203326',
       type: 'nogame'
     }, {
       id: 'app30',
