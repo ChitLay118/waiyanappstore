@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**************************************************************************
    * EDITABLE AREA:
    * Replace icon and download_link values below with your own MediaFire links.
-   * Add a `type` property to each app: 'game' or 'nogame'.
+   * Add a `type` property to each app: 'game' , 'nogame' or 'edit'.
    * *************************************************************************/
   const apps = [{
       id: 'app1',
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'modversion',
       purpose: 'App',
       download_link: 'https://www.mediafire.com/file/c2fy4cqbjozpju1/InShot_Pro_v2.653.1753_Modded_by_%2540Getmodpcs.apk/file',
-      type: 'Edit'
+      type: 'edit'
     }, {
       id: 'app18',
       title: 'MoviesHub',
