@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WY APPS STORE</title>
-  <meta name="description" content="All kinds of games and apps you need">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -17,11 +15,6 @@
           <h1>WY APPS STORE</h1>
           <p class="lead">လိုချင်သော Game နှင့် App မျိုးစုံကို ဒီနေရာမှာ ရှာဖွေရယူနိုင်ပါသည်</p>
         </div>
-      </div>
-      <div class="contact">
-        <a href="https://t.me/waiyanfelix" target="_blank">Contact Us</a>
-        <br>
-        <button onclick="openEditSource()">Edit Source Code</button>
       </div>
     </header>
 
@@ -41,35 +34,8 @@
         </div>
     </main>
 
-    <div id="banner" class="banner">
-      <div>
-        <div id="bannerApp" class="txt"></div>
-        <div id="bannerEmail" class="right"></div>
-      </div>
-      <div class="progress-wrap">
-        <div id="progressBar" class="progress-bar"></div>
-      </div>
-    </div>
-
-    <div id="editModal" class="modal-overlay">
-      <div class="modal-dialog">
-        <div class="modal-header">
-          <h2>Edit Source Code</h2>
-          <button class="modal-close" onclick="closeEditSource()">&times;</button>
-        </div>
-        <div class="modal-body">
-          <p>This is a custom apps store. To edit the app list, download the source code and modify the <code>apps</code> array in the <code>script.js</code> file.</p>
-          <ol>
-            <li>Find the <code>script.js</code> file.</li>
-            <li>Go to the <code>EDITABLE AREA</code>.</li>
-            <li>Change the <code>title</code>, <code>icon</code>, <code>category</code>, <code>purpose</code>, and <code>download_link</code> for each app.</li>
-            <li>Add a <code>type</code>: <code>'game'</code>, <code>'nogame'</code>, or <code>'edit'</code>.</li>
-          </ol>
-          <p>When you are done, upload the modified files back to your website.</p>
-        </div>
-      </div>
-    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
