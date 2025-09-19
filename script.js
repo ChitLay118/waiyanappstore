@@ -414,6 +414,22 @@ document.addEventListener('DOMContentLoaded', () => {
       purpose: 'Unlimited Money/VIP Unlocked',
       download_link: 'https://getmodsapk.com/dl-track/carx-highway-racing-apk-mod/211881',
       type: 'game'
+    },{
+      id: 'app53',
+      title: 'Invasion: Aerial Warfare',
+      icon: 'https://getmodsapk.com/storage/Invasion%20Modern%20Empire%20MOD%20APK4.webp',
+      category: 'modversion',
+      purpose: 'Unlimited Money/Energy',
+      download_link: 'https://getmodsapk.com/invasion-modern-empire-mod-apk/download/210877',
+      type: 'game'
+    },{
+      id: 'app54',
+      title: 'Tacticool',
+      icon: 'https://getmodsapk.com/storage/Tacticool%20MOD%20APK%20(1)3.webp',
+      category: 'modversion',
+      purpose: 'Mod Menu/Unlimited Money',
+      download_link: 'https://getmodsapk.com/tacticool-mod-apk/download/210869',
+      type: 'game'
     },
                 
     ];
