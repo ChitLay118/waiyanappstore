@@ -432,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: 'https://i.ibb.co/vCKbgpTQ/photo-2025-09-10-14-24-45.jpg',
       category: 'modversion',
       purpose: 'app',
-      download_link: 'https://1024terabox.com/s/1pL1yaDHqA4tF4v6Vx5_KOA',
+      download_link: '',
       type: 'game'
     },
                ];
