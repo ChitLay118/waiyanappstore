@@ -425,7 +425,17 @@ document.addEventListener('DOMContentLoaded', () => {
       purpose: 'Mod Menu/Unlimited Money',
       download_link: 'https://getmodsapk.com/dl-track/tacticool-mod-apk/210869',
       type: 'game'
-    }, ];
+    },
+               {
+      id: 'app55',
+      title: 'MyanmarNet',
+      icon: 'https://i.ibb.co/vCKbgpTQ/photo-2025-09-10-14-24-45.jpg',
+      category: 'modversion',
+      purpose: 'app',
+      download_link: 'https://1024terabox.com/s/1pL1yaDHqA4tF4v6Vx5_KOA',
+      type: 'game'
+    },
+               ];
   
   // --- DOM Elements ---
   const appsGrid = document.getElementById('appsGrid');
