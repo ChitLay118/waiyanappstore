@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: 'https://i.ibb.co/mrNs6MTk/photo-2025-09-19-01-42-56.jpg',
       category: 'modversion',
       purpose: 'App',
-      download_link: 'https://www.mediafire.com/file/x3ppd2ke2e229u3/TeraBox_Premium_v4.6.0_Modded_by_%2540Getmodpcs.apk/file',
+      download_link: 'https://files.modyolo.com/Terabox/TeraBox_%20v4.5.3%20_MOD.apk',
       type: 'nogame'
     }, {
       id: 'app46',
