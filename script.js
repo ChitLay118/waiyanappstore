@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 'app1',
       title: 'သတင်းနှင့်ဇာတ်ကား',
       icon: 'https://i.ibb.co/NRB7DRs/IMG-20250907-105744.png',
+       bgImageUrl: 'https://i.ibb.co/dstKxsX4/pexels-mccutcheon-1191710.jpg',
       category: 'Entertainment',
       purpose: 'သတင်း၊ ရုပ်ရှင်နှင့် ဗီဒီယိုများ ကြည့်ရှုရန်',
       download_link: 'https://www.mediafire.com/file/kz2cas0hpx4p2mz/%E1%80%9E%E1%80%90%E1%80%84%E1%80%BA%E1%80%B8%E1%80%94%E1%80%BE%E1%80%84%E1%80%BA%E1%80%B7%E1%80%87%E1%80%AC%E1%80%90%E1%80%BA%E1%80%80%E1%80%AC%E1%80%B8update.apk/file',
